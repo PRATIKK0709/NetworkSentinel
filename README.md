@@ -2,7 +2,7 @@
 
 ## Working
 
-`NetworkManager` is a class that conforms to the ObservableObject protocol, making it observable for SwiftUI views. It has two published properties: `isInternetConnected` to track the internet connection status and isRestored to indicate if the connection has been restored.
+`NetworkManager` is a class that conforms to the ObservableObject protocol, making it observable for SwiftUI views. It has two published properties: `isInternetConnected` to track the internet connection status and `isRestored` to indicate if the connection has been restored.
 
 `NWPathMonitor` is used to monitor network path changes. It checks if the connection status is "satisfied" (i.e., there's an active internet connection) and updates the isInternetConnected property accordingly. If the connection was restored after a period of disconnection, it sets isRestored to true and then uses a timer to reset it to false after 3 seconds.
 
